@@ -1,8 +1,8 @@
 # QuotesApp
 ## About the Author
-Developed by Aron kipkoech langat on 29rd August 2021.
+Developed by Amos kimutai on 15 th october 2021
 ## Description
-this an app that uses the github Api so as to make the repositories and a persons profile easily
+Github-tracker is a an app that enables its user search for any specific person and can view thier projects and more of details.
 ## Setup/Installation Requirements
 Requirements:
     <ul>
