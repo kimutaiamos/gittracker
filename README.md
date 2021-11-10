@@ -13,7 +13,7 @@ Requirements:
         <li>Angular</li>
     </ul>
 Fork or clone the repository using the below provided link</br>
-https://github.com/lakipkoecharo/Quotes-</br>
+https://github.com/kimutaiamos/gittracker.git-</br>
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 ## Technologies Used
 The following languages have been used to develop the project
@@ -25,7 +25,7 @@ The following languages have been used to develop the project
         <li>Angular framework</li>
     </ol>
 ## Live link
-Here's the link to the project's [https://lanarokip.github.io/git/]
+Here's the link to the project's []
 ### Bugs
 No bugs have been identified in the project.
 ### Contact information
