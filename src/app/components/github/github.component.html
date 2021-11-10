@@ -1,0 +1,73 @@
+
+<!-- The header part -->
+<header class="mt-5">
+    <div class="menu row">
+        <div class="col">
+            <p class="menuOne">Github</p>
+        </div>
+        <div class="col">
+            <div class="row">
+                <a class="col-sm-4 menuTexts" routerLink="users" routerLinkActive='active'>Search UserName</a>
+                <a class="col-sm-4 menuTexts" routerLink="repositories" routerLinkActive='active'>Search Repos</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- The Big text -->
+<div class="text-center mt-3">
+    <p class="bigText">Github Search</p>
+</div>
+<div class="text-center">
+    <form action="">
+        <input [(ngModel)]="username" name="search" type="search" class="form-control searchBox" placeholder="search">
+        <input (click)='getUsername()'(click)='getRepos()' type="submit" value="SEARCH" class="btn btn-primary mt-3" >
+    </form>
+</div>
+
+<div class="border container" *ngIf='gituser.login'>
+    <div  class="row">
+        <div class="col-sm-3">
+            <img class="img-fluid" src="{{gituser.avatar_url}}">
+      </div>
+        <div class="col-sm-6 mr-5">
+            <h4>username:{{gituser.login}}</h4>
+            <h4>following:{{gituser.following}} people</h4>
+            <h4>followed by:{{gituser.followers}} people</h4>
+            <h4>no.repos:{{gituser.public_repos}}</h4>
+            <h4>created on:{{gituser.created_at | date}}</h4>
+         </div>
+        
+    </div>
+</div>
+<div class="text-center my-5 ">
+    <div>
+        <button class="btn btn-info "><i>repositories</i></button>
+        <div class="container">
+            <div class="card mt-5" *ngFor="let repo of gitRepos">
+              <div class="card">
+                <div class="bng-dark card-header text-center"><h2 >{{repo.name}}</h2></div>
+                <div class="card-body">
+                  <p >description: {{repo.description}}</p>
+                  <p >language used: {{repo.language}}</p>
+                </div>
+                <div class="card-footer flex-footer">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <button class="text-center btn btn-success">Watchers <span class="data">{{repo.watchers}}</span></button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="text-center btn btn-success">Forks <span class="data">{{repo.forks}}</span></button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="text-center btn btn-success">Branch <span class="data">{{repo.default_branch}} </span></button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+<!-- {{gituser.login}}
+{{gituser.following}} -->
