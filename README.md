@@ -29,10 +29,7 @@ Here's the link to the project's []
 ### Bugs
 No bugs have been identified in the project.
 ### Contact information
-cell:  +254705378641
-Mail: lankipkoecharo@gmail.com
+cell:  +254743880558
+Mail: amos.kimutai@student.moringaschool.com
 ### License
 [License](./license)
-### The App screenshots
-![Screenshot one](./src/assets/screen1.png)
-![Screenshot two](./src/assets/sreen2.png)
