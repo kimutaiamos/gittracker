@@ -10,7 +10,7 @@ import { RepoService } from 'src/app/services/reposervice.service'
 export class GithubComponent implements OnInit {
 
   username:any=GithubserviceService;
-  gituser:Users=new Users('','','','',0,0,0);
+  gituser:Users=new Users('','','','',0,0,0,'','',);
   gitRepos:any;
   getUsername(){
     
@@ -19,14 +19,14 @@ export class GithubComponent implements OnInit {
     
   }
   getRepos(){
-    this.aron.getRepo(this.username).subscribe(details=>{
+    this.amos.getRepo(this.username).subscribe(details=>{
       console.log(details);
       return this.gitRepos = details;
 
     });
   }
 
-  constructor(private service:GithubserviceService, private aron:RepoService) {
+  constructor(private service:GithubserviceService, private amos:RepoService) {
     
    }
 
