@@ -5,11 +5,13 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class GithubserviceService {
-  username:any;
-  repos:any;
-  constructor( private http:HttpClient) { }
-  getUser(user:any){
-    return this.http.get("https://api.github.com/users/" + user+ "?access_token=" + environment.api_key)
-    .pipe(((response:any)=>response));
+  username: any;
+  repos: any;
+  constructor(private http: HttpClient) { }
+  getUser() {
+    return this.http.get(`${environment.apiurl}/${environment.user}?${environment.api_key}`)
+      .subscribe(res => {
+      
+      })
   }
 }

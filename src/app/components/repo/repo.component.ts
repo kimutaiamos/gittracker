@@ -10,10 +10,9 @@ export class RepoComponent implements OnInit {
   username:any;
   gituser:any;
   getUsername(){
-    this.service.getUser(this.username).subscribe(profile=>{
-      console.log(profile);
-      return this.gituser = profile;
-    });
+   return this.service.getUser()
+    
+      
   }
 
   constructor(private service:GithubserviceService) {
